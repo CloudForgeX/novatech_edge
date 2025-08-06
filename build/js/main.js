@@ -12,6 +12,14 @@ const initApp = () => {
 
   hamburgerBtn.addEventListener("click", toggleMenu);
   closeBtn.addEventListener("click", toggleMenu);
+
+  const navLinks = mobileMenu.querySelectorAll("a");
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex");
+    });
+  });
 };
 
 document.addEventListener("DOMContentLoaded", initApp);
